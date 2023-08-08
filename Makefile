@@ -12,4 +12,7 @@ migratedown:
 dropdb:
 	docker exec -it postgres dropdb ginko
 
-.PHONY: postgres createdb dropdb migrateup migratedown
+sqlc:
+	sqlc generate
+
+.PHONY: postgres createdb dropdb migrateup migratedown sqlc
